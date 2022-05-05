@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const messageSchema = new mongoose.Schema({
   user: String,
@@ -14,4 +14,4 @@ messageSchema.set("toJSON", {
 });
 const Message = mongoose.model("message", messageSchema);
 
-module.exports = Message;
+export default Message;

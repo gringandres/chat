@@ -1,10 +1,11 @@
-require("dotenv").config(); // ENV
-require("./mongo");
-const express = require("express");
+import "./mongo";
+import dotenv from "dotenv";
+import express from "express";
+import http from "http";
+import messageRoute from "./routes/messageRoute";
 const app = express();
-const http = require("http");
+dotenv.config();
 const server = http.createServer(app);
-const messageRoute = require("./routes/messageRoute");
 
 app.use(express.json());
 app.use("/api/message", messageRoute());

@@ -1,12 +1,9 @@
-const express = require("express");
+import express from "express";
+import Message from "../model/Messages";
+
 const route = express.Router();
-const Message = require("../model/Messages");
 
-module.exports = () => {
-  // route.get("/", (req, res) => {
-  //   res.send("<h1>Hola</h1>");
-  // });
-
+const messageRouter = () => {
   route.get("/", async (req, res) => {
     const message = await Message.find({});
     res.json(message);
@@ -24,3 +21,5 @@ module.exports = () => {
   });
   return route;
 };
+
+export default messageRouter;
