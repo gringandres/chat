@@ -1,4 +1,4 @@
-import Message from "./model/Messages";
+import Message from "./model/Messages.js";
 
 const sockets = (io) => {
   io.on("connection", (socket) => {
