@@ -1,9 +1,9 @@
-import "./mongo";
+import "./mongo.js";
 import dotenv from "dotenv";
 import express from "express";
 import http from "http";
-import messageRoute from "./routes/messageRoute";
-import sockets from "./sockets";
+import messageRoute from "./routes/messageRoute.js";
+import sockets from "./sockets.js";
 import { Server } from "socket.io";
 import cors from "cors";
 
